@@ -32,5 +32,36 @@ class Peta:
       return True
     return False
 
+def hapusJalan(self, kota1, kota2):
+    if kota1 in self.cityList and kota2 in self.cityList:
+      self.cityList[kota2].remove(kota1)
+    #hapus kota 1 di list kota2
+      self.cityList[kota1].remove(kota2)
+    #hapus kota 2 di list kota1
+      return True
+    return False
+
+# Inisiasi objek peta Jawa Timur
+petaJawaTimur = Peta()
+
+# Tambahkan kota-kota di Jawa Timur
+kotaJawaTimur = [
+  "Surabaya",
+  "Malang",
+  "Sidoarjo",
+  "Kediri",
+  "Mojokerto",
+  "Jember",
+  "Bangkalan",
+  "Blitar",
+  "Probolinggo",
+  "Pasuruan",
+  "Lamongan",
+  "Gresik",
+  "Tuban",
+  "Bojonegoro",
+  "Sampang"
+]
+
 
 
