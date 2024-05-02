@@ -63,5 +63,51 @@ kotaJawaTimur = [
   "Sampang"
 ]
 
+for kota in kotaJawaTimur:
+  petaJawaTimur.tambahkanKota(kota)
+
+# Tambahkan jalan-jalan di Jawa Timur
+petaJawaTimur.tambahkanJalan("Surabaya", "Sidoarjo")
+petaJawaTimur.tambahkanJalan("Surabaya", "Mojokerto")
+petaJawaTimur.tambahkanJalan("Surabaya", "Malang")
+petaJawaTimur.tambahkanJalan("Malang", "Blitar")
+petaJawaTimur.tambahkanJalan("Malang", "Pasuruan")
+petaJawaTimur.tambahkanJalan("Sidoarjo", "Gresik")
+petaJawaTimur.tambahkanJalan("Sidoarjo", "Bangkalan")
+petaJawaTimur.tambahkanJalan("Kediri", "Blitar")
+petaJawaTimur.tambahkanJalan("Kediri", "Jember")
+petaJawaTimur.tambahkanJalan("Kediri", "Gresik")
+petaJawaTimur.tambahkanJalan("Mojokerto", "Lamongan")
+petaJawaTimur.tambahkanJalan("Mojokerto", "Jember")
+petaJawaTimur.tambahkanJalan("Jember", "Pasuruan")
+petaJawaTimur.tambahkanJalan("Bangkalan", "Gresik")
+petaJawaTimur.tambahkanJalan("Bangkalan", "Blitar")
+petaJawaTimur.tambahkanJalan("Surabaya", "Lamongan")
+petaJawaTimur.tambahkanJalan("Probolinggo", "Jember")
+petaJawaTimur.tambahkanJalan("Kediri", "Malang")
+petaJawaTimur.tambahkanJalan("Probolinggo", "Pasuruan")
+petaJawaTimur.tambahkanJalan("Lamongan", "Gresik")
+petaJawaTimur.tambahkanJalan("Probolinggo", "Bangkalan")
+petaJawaTimur.tambahkanJalan("Surabaya", "Bangkalan")
+petaJawaTimur.tambahkanJalan("Surabaya", "Sampang")
+petaJawaTimur.tambahkanJalan("Bojonegoro", "Tuban")
+petaJawaTimur.tambahkanJalan("Lamongan", "Bojonegoro")
+petaJawaTimur.tambahkanJalan("Tuban", "Lamongan")
+petaJawaTimur.tambahkanJalan("Gresik", "Tuban")
+petaJawaTimur.tambahkanJalan("Sampang", "Bangkalan")
+petaJawaTimur.tambahkanJalan("Bojonegoro", "Mojokerto")
+petaJawaTimur.tambahkanJalan("Bojonegoro", "Kediri")
+
+
+# Tampilkan peta awal
+petaJawaTimur.printPeta()
+print('------------------------------')
+
+# Hapus kota Bangkalan
+petaJawaTimur.hapusKota("Bangkalan")
+
+# Tampilkan peta setelah Bangkalan dihapus
+petaJawaTimur.printPeta()
+
 
 
