@@ -75,3 +75,64 @@ kotaJawaTimur = [
     "Bojonegoro",
     "Sampang"
 ]
+print("Jalan yang terhubung")
+petaJawaTimur = Peta()
+petaJawaTimur.tambahkanKota("Surabaya")
+petaJawaTimur.tambahkanKota("Malang")
+petaJawaTimur.tambahkanKota("Sidoarjo")
+petaJawaTimur.tambahkanKota("Kediri")
+petaJawaTimur.tambahkanKota("Mojokerto")
+petaJawaTimur.tambahkanKota("Jember")
+petaJawaTimur.tambahkanKota("Bangkalan")
+petaJawaTimur.tambahkanKota("Blitar")
+petaJawaTimur.tambahkanKota("Probolinggo")
+petaJawaTimur.tambahkanKota("Pasuruan")
+petaJawaTimur.tambahkanKota("Lamongan")
+petaJawaTimur.tambahkanKota("Gresik")
+petaJawaTimur.tambahkanKota("Tuban")
+petaJawaTimur.tambahkanKota("Bojonegoro")
+petaJawaTimur.tambahkanKota("Sampang")
+
+edges = [
+    ("Surabaya", "Sidoarjo", 20),
+    ("Surabaya", "Mojokerto", 40),
+    ("Surabaya", "Malang", 80),
+    ("Malang", "Blitar", 30),
+    ("Malang", "Pasuruan", 50),
+    ("Sidoarjo", "Gresik", 15),
+    ("Sidoarjo", "Bangkalan", 10),
+    ("Kediri", "Blitar", 35),
+    ("Kediri", "Jember", 90),
+    ("Kediri", "Gresik", 60),
+    ("Mojokerto", "Lamongan", 45),
+    ("Mojokerto", "Jember", 85),
+    ("Jember", "Pasuruan", 70),
+    ("Bangkalan", "Gresik", 25),
+    ("Bangkalan", "Blitar", 55),
+    ("Surabaya", "Lamongan", 55),
+    ("Probolinggo", "Jember", 75),
+    ("Kediri", "Malang", 45),
+    ("Probolinggo", "Pasuruan", 60),
+    ("Lamongan", "Gresik", 20),
+    ("Probolinggo", "Bangkalan", 35),
+    ("Surabaya", "Bangkalan", 25),
+    ("Surabaya", "Sampang", 40),
+    ("Bojonegoro", "Tuban", 50),
+    ("Lamongan", "Bojonegoro", 55),
+    ("Tuban", "Lamongan", 30),
+    ("Gresik", "Tuban", 40),
+    ("Sampang", "Bangkalan", 45),
+    ("Bojonegoro", "Mojokerto", 65),
+    ("Bojonegoro", "Kediri", 60)
+]
+
+for edge in edges:
+    petaJawaTimur.tambahkanJalan(edge[0], edge[1], edge[2])
+
+petaJawaTimur.printPeta()
+print('-----------------')
+
+jarakSemuaKota = petaJawaTimur.dijkstra("Surabaya")
+print("Jarak Kota Berikut Nya dari Surabaya")
+for kota, jarak in jarakSemuaKota.items():
+    print(kota, "adalah", jarak, "KM")
